@@ -1,0 +1,55 @@
+/* Center the chart containers and adjust their size */
+canvas {
+  display: block; /* Ensures it is treated as a block-level element */
+  margin: 0 auto; /* Center the canvas horizontally */
+  width: 70% !important; /* Make the chart smaller, adjust as needed */
+  height: 300px !important; /* Reduce the height of the chart */
+  max-width: 50%; /* Prevent it from becoming too large */
+}
+
+/* Specific styles for each chart container */
+#aiAdoptionPieChart{
+  margin: 20px auto 40px; /* Add spacing between each chart */
+  width: 100% !important; /* Make the chart smaller */
+  height: 400px !important; /* Set a consistent height */
+  border: 1px solid #ccc; /* Optional: Add a border around the chart */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  background-color: #f9f9f9; /* Optional: Light background color */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  padding: 30px;
+}
+
+#aiAdoptionBarChart{
+  margin: 20px auto 40px; /* Add spacing between each chart */
+  width: 100% !important; /* Make the chart smaller */
+  height: 500px !important; /* Set a consistent height */
+  border: 1px solid #ccc; /* Optional: Add a border around the chart */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  background-color: #f9f9f9; /* Optional: Light background color */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  padding: 30px;
+}
+
+/* Styling for the description under the first chart */
+.chart-description {
+  width: 70% !important; /* Ensure description matches the width of the chart */
+  margin: 20px auto; /* Center the description horizontally and add spacing */
+  background-color: #ffffffa2; /* White background */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Light shadow */
+  padding: 15px; /* Add some padding around the text */
+  text-align: left; /* Align text to the left */
+}
+
+/* Paragraph inside chart description */
+.chart-description p {
+  color: black; /* Set text color to black */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bold styling for the strong text */
+.chart-description strong {
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+<!-- Navbar Component -->
+<app-navbar></app-navbar>
+
+<!-- Main content -->
+<div class="main-container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Session timeout notification -->
+<div *ngIf="timeoutWarning" class="timeout-modal">
+  <div class="modal-content">
+    <p>Your session has expired. Redirecting to the login page...</p>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<nav class="navbar">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <ul class="nav-list">
+    <!-- Login link (Visible only on the login page and when not logged in) -->
+    <li class="nav-item" *ngIf="!isLoggedIn() && isCurrentRoute('/login')">
+      <a
+        routerLink="/login"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Login</a
+      >
+    </li>
+
+    <!-- Register link (Visible only on the register page and when not logged in) -->
+    <li class="nav-item" *ngIf="!isLoggedIn() && isCurrentRoute('/register')">
+      <a
+        routerLink="/register"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Register</a
+      >
+    </li>
+
+    <!-- Dashboard link (Visible for all users) -->
+    <li class="nav-item">
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="navigateTo('/dashboard')">Dashboard</a>
+    </li>
+
+    <!-- Summary link (Visible for all users) -->
+    <li class="nav-item">
+      <a
+        routerLink="/summary"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="navigateTo('/summary')">Summary</a>
+    </li>
+
+    <!-- Reports link (Visible for all users) -->
+    <li class="nav-item">
+      <a
+        routerLink="/reports"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="navigateTo('/reports')">Reports</a>
+    </li>
+
+    <!-- Logout link (Visible only when logged in) -->
+    <li class="nav-item" *ngIf="isLoggedIn()">
+      <a class="logout" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+</nav>

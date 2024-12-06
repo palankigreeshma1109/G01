@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.content {
+  margin-top: 5rem; /* Adjust this to match the navbar height */
+  padding: 1rem; /* Add padding for consistent spacing */
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Optional */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+              url('assets/health.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}

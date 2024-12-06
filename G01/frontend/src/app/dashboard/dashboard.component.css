@@ -1,0 +1,87 @@
+.content {
+  padding: 1rem;
+  color: black; /* Text color is black */
+}
+
+.summary-section {
+  background-color: white; /* Set background color to white */
+  padding: 1.5rem;
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  margin-top: 1rem;
+  border: 1px solid #ccc; /* Optional: Add a light border for better structure */
+}
+
+.summary-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline; /* Underline for the heading */
+  color: black; /* Heading color is black */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.summary-section p {
+  font-size: 1rem;
+  line-height: 1.5; /* Better readability */
+  margin-bottom: 1rem;
+  color: black; /* Paragraph text color is black */
+}
+
+.summary-section a {
+  font-weight: bold;
+  color: darkblue; /* Set link color to blue */
+  text-decoration: underline;
+
+}
+.summary-section a:hover {
+  color: darkblue; /* Optional: Change color on hover for better interaction */
+  text-decoration: none; /* Optional: Remove underline on hover */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    padding: 0.8rem; /* Reduce padding for smaller screens */
+  }
+
+  .summary-section {
+    padding: 1rem; /* Reduce padding */
+    border-radius: 6px; /* Adjust border radius for smaller screens */
+  }
+
+  .summary-section h3 {
+    font-size: 1.3rem; /* Slightly smaller heading size */
+  }
+
+  .summary-section p {
+    font-size: 0.9rem; /* Reduce font size for better fit */
+  }
+
+  .summary-section a {
+    font-size: 0.9rem; /* Adjust link font size */
+  }
+}
+
+/* Further adjustments for very small devices (phones under 480px) */
+@media (max-width: 480px) {
+  .content {
+    padding: 0.5rem; /* Further reduce padding */
+  }
+
+  .summary-section {
+    padding: 0.8rem;
+    margin-top: 0.8rem; /* Adjust margin for smaller viewports */
+  }
+
+  .summary-section h3 {
+    font-size: 1.2rem; /* Further reduce heading size */
+  }
+
+  .summary-section p {
+    font-size: 0.8rem; /* Smaller paragraph text */
+  }
+
+  .summary-section a {
+    font-size: 0.8rem; /* Adjust link size for smaller devices */
+  }
+}

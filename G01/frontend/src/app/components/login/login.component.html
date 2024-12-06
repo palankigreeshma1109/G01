@@ -1,0 +1,39 @@
+<!-- Login Form -->
+<div class="login-page">
+<div class="login-container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <h2>Login</h2>
+
+    <!-- Username Field -->
+    <div>
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" type="text" />
+      <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+        Username is required
+      </div>
+    </div>
+
+    <!-- Password Field -->
+    <div>
+      <label for="password">Password</label>
+      <input id="password" formControlName="password" type="password" />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        Password is required
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+
+    <!-- Error Message -->
+    <div *ngIf="loginError" class="error-message">
+      Invalid login credentials
+    </div>
+  </form>
+
+  <!-- Registration Link -->
+  <div class="register-link">
+    Not a user? <a (click)="navigateToRegister()">Register here</a>
+  </div>
+</div>
+</div>

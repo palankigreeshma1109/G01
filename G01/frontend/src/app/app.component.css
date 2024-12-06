@@ -1,0 +1,56 @@
+/* Ensure navbar is at the top */
+app-navbar {
+  position: fixed; /* Fix navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Make sure navbar is above other content */
+  background-color: #fff; /* Optional: background color for the navbar */
+  border-bottom: 1px solid #ccc; /* Optional: border for navbar */
+}
+
+/* Add margin-top to body or main content to avoid overlap with navbar */
+body {
+  margin-top: 70px; /* Adjust based on the height of your navbar */
+}
+
+/* Alternatively, if your main container element has a class like `.main-container`, you can add the margin there */
+.main-container {
+  margin-top: 70px; /* Same as navbar height */
+}
+
+/*TIMOUT DELETE IF NOT NEEDED*/
+.timeout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+

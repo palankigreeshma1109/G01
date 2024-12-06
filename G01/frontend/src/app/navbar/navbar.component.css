@@ -1,0 +1,132 @@
+/* General styles for the navbar */
+
+:root {
+  --navbar-height: 60px; /* Adjust this value if you change the navbar height */
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: flex-end; /* Align navbar items to the right */
+  align-items: center;
+  height: var(--navbar-height);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Navigation list styles */
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Align the nav items to the right */
+  gap: 2rem;
+}
+
+/* Navigation item links */
+.nav-item a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  outline: 2px solid transparent;
+}
+
+/* Active state for the current page */
+.nav-item a.active {
+  color: #A1D8B7;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3);
+}
+
+/* Hover effect for links */
+.nav-item a:hover {
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for Logout */
+.nav-item a.logout:hover {
+  color: red;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+/* Snackbar success style */
+.custom-snackbar-success {
+  background-color: #00bcd4;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+/* Snackbar error style */
+.custom-snackbar-error {
+  background-color: #f44336;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.mat-snack-bar-container {
+  z-index: 9999 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Adjust navbar padding and spacing for mobile */
+  .navbar {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .nav-list {
+    gap: 1.5rem; /* Reduce spacing between items */
+    justify-content: flex-end; /* Align items to the right */
+  }
+
+  .nav-item a {
+    font-size: 1rem; /* Adjust font size for better mobile readability */
+    padding: 0.5rem 1.2rem; /* Reduce padding for better fit */
+  }
+}
+
+/* Snackbar responsiveness */
+@media (max-width: 768px) {
+  .custom-snackbar-success, .custom-snackbar-error {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    padding: 6px 12px; /* Reduce padding */
+  }
+
+  .mat-snack-bar-container {
+    max-width: 90%; /* Ensure snackbar fits within smaller screens */
+    left: 5%; /* Center snackbar */
+  }
+}
+
+/* Extra small devices (phones under 480px) */
+@media (max-width: 480px) {
+  .nav-item a {
+    font-size: 0.9rem; /* Smaller font size for very small screens */
+    padding: 0.4rem 1rem; /* Adjust padding */
+  }
+
+  .custom-snackbar-success, .custom-snackbar-error {
+    font-size: 0.8rem; /* Reduce font size further */
+    padding: 5px 10px; /* Minimize padding */
+  }
+}

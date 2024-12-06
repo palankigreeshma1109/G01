@@ -1,0 +1,144 @@
+/* Ensure body takes full height and centers content */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  background-size: cover;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #F5F5F5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for login page container */
+.login-container {
+  width: 100%;
+  max-width: 400px; /* Max width to prevent form from being too wide */
+  padding: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Prevent container overflow */
+  margin: 0 auto; /* This centers the container horizontally */
+}
+
+/* Styling for login page container */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height for centering */
+}
+
+/* Center the 'Login' title */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Spacing between form fields */
+form div {
+  margin-bottom: 15px;
+  width: 100%;
+  color:#2980B9
+}
+
+/* Styling for input fields */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Error messages styling */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+/* Button styling */
+button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Disable button when form is invalid */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Registration link styling */
+.register-link {
+  margin-top: 15px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Smaller devices (phones, small tablets) */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 20px; /* Reduce padding for small screens */
+    box-shadow: none; /* Remove shadow for minimalistic design */
+  }
+
+  h2 {
+    font-size: 1.2em; /* Adjust title size */
+  }
+
+  button {
+    font-size: 0.9em; /* Smaller button text */
+    padding: 8px; /* Reduce padding */
+  }
+}
+
+/* Larger tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  .login-container {
+    padding: 30px; /* Adjust padding for medium screens */
+  }
+
+  h2 {
+    font-size: 1.4em; /* Slightly larger title */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .login-container {
+    max-width: 500px; /* Increase max width for large screens */
+  }
+}
