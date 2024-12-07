@@ -23,13 +23,13 @@ const secretKey = process.env.JWT_SECRET || 'your_secret_key';
 
 // Setup the connection pool to AWS RDS MySQL instance
 const pool = mysql.createPool({
-  host: 'nbadproject.cf8oe486mcnv.us-east-2.rds.amazonaws.com', // AWS RDS endpoint
-  user: 'admin',                                               // RDS username
-  password: 'SRnagrbh_1109',                                   // RDS password
-  database: 'nbadproject',                                     // Database name
-  port: 3306,                                                  // MySQL default port
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
   waitForConnections: true,
-  connectionLimit: 10,                                         // Maximum connections in pool
+  connectionLimit: 10,
   queueLimit: 0,
 });
 
